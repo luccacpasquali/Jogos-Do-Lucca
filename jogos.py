@@ -1,16 +1,29 @@
 import forca
 import adivinhacao
 
-print("******************")
-print("Escolha o seu jogo")
-print("******************"  )
+def escolha_jogo():
+    jogo = 0
 
-print("[1] Forca [2] Adivinhação")
-jogo = int(input("Digite sua escolha: "))
+    print("******************")
+    print("Escolha o seu jogo")
+    print("******************")
 
-if(jogo == 1):
-    print("Forca...")
-    forca.jogar()
-elif(jogo == 2):
-    print("Adivinhação...")
-    adivinhacao.jogar()
+    while jogo != 3:
+        print("\n[1] Forca [2] Adivinhação [3] Sair")
+        jogo = int(input("Digite sua escolha: "))
+
+        if (jogo == 1):
+            print("Forca...")
+            forca.jogar()
+        elif (jogo == 2):
+            print("Adivinhação...")
+            adivinhacao.jogar()
+        elif (jogo == 3):
+            print("Até logo...")
+        else:
+            print("--- ERRO ---")
+            print("Número inváldo :( Tente novamete!")
+
+
+
+escolha_jogo()

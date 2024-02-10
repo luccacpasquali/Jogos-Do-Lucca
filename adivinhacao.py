@@ -1,23 +1,12 @@
+import bem_vindo
 def jogar( ):
     import random
 
-    print("*********************************")
-    print("Bem vindo ao jogo de adivinhação")
-    print("*********************************")
+    bem_vindo.bem_vindo_jogo("Adivinhação")
 
     numero_secreto = round(random.randrange(1,101))
-    total_tentativas = 0
+    total_tentativas = escolha_nivel()
     pontos = 1000
-
-    print("Qual nivel deseja jogar?")
-    nivel = int(input("[1] Fácil [2] Médio [3] Difícil: "))
-
-    if(nivel == 1):
-        total_tentativas = 20
-    elif(nivel == 2):
-        total_tentativas = 10
-    else:
-        total_tentativas = 5
 
     for rodada in range(1,total_tentativas + 1):
         print("Tentativa: {} de {}".format(rodada,total_tentativas))
@@ -48,6 +37,19 @@ def jogar( ):
 
     print("Fim de Jogo!")
     print(numero_secreto)
+
+def escolha_nivel():
+    print("Qual nivel deseja jogar?")
+    nivel = int(input("[1] Fácil [2] Médio [3] Difícil: "))
+
+    if (nivel == 1):
+        total_tentativas = 20
+    elif (nivel == 2):
+        total_tentativas = 10
+    else:
+        total_tentativas = 5
+
+    return total_tentativas
 
 if(__name__ == "__main__"):
     jogar()

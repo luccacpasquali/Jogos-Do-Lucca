@@ -1,8 +1,8 @@
 import random
-
+import bem_vindo
 
 def jogar():
-    imprime_bem_vindo()
+    bem_vindo.bem_vindo_jogo("Forca")
 
     palavra_secreta = carrega_palavras()
 
