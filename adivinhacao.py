@@ -2,19 +2,23 @@ import bem_vindo
 def jogar( ):
     import random
 
+    #inicia o jogo com saudação
     bem_vindo.bem_vindo_jogo("Adivinhação")
 
     numero_secreto = round(random.randrange(1,101))
     total_tentativas = escolha_nivel()
     pontos = 1000
 
+    #roda o jogo enquanto tiver tentativas
     for rodada in range(1,total_tentativas + 1):
         print("Tentativa: {} de {}".format(rodada,total_tentativas))
 
-        chute_str = input("Digite um número entre 1 e 100: ")
-        print("Você digitou ",chute_str)
-        chute = int(chute_str)
+        #recebe o chute do usuario
+        chute = int(input("Digite um número entre 1 e 100: "))
 
+        print("Você digitou ",chute)
+
+        #valida chute do usurio
         if(chute < 1 or chute > 100):
             print("Número Inválido, você deve jogar um número entre 1 e 100")
             continue
@@ -36,8 +40,10 @@ def jogar( ):
             pontos = pontos - pontos_perdidos
 
     print("Fim de Jogo!")
-    print(numero_secreto)
+    if not acertou:
+        print("O número secreto era {}".format(numero_secreto))
 
+# recebe o nível que o usuario quer jogar e retorna  o numero de tentativas
 def escolha_nivel():
     print("Qual nivel deseja jogar?")
     nivel = int(input("[1] Fácil [2] Médio [3] Difícil: "))

@@ -1,3 +1,5 @@
+import time
+
 import forca
 import adivinhacao
 
@@ -14,9 +16,11 @@ def escolha_jogo():
 
         if (jogo == 1):
             print("Forca...")
+            time.sleep(2)
             forca.jogar()
         elif (jogo == 2):
             print("Adivinhação...")
+            time.sleep(2)
             adivinhacao.jogar()
         elif (jogo == 3):
             print("Até logo...")
