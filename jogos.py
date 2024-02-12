@@ -6,9 +6,9 @@ import adivinhacao
 def escolha_jogo():
     jogo = 0
 
-    print("******************")
-    print("Escolha o seu jogo")
-    print("******************")
+    print("***************")
+    print("Jogos do Lucca")
+    print("***************")
 
     while jogo != 3:
         print("\n[1] Forca [2] Adivinhação [3] Sair")
