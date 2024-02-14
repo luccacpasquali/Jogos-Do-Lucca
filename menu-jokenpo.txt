@@ -1,0 +1,3 @@
+No jogo do Jokenpo você escolhe entre:
+[1] pedra [2] papel [3] tesoura
+O programa vai aleratoriamente gerar uma resposta

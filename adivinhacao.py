@@ -19,7 +19,7 @@ def jogar( ):
 # recebe o nível que o usuario quer jogar e retorna  o numero de tentativas
 def escolha_nivel():
     print("Qual nivel deseja jogar?")
-    nivel = int(input("[1] Fácil [2] Médio [3] Difícil: "))
+    nivel = int(input("[1] Fácil [2] Médio [3] Difícil [4] Regras: "))
 
     if (nivel == 1):
         total_tentativas = 20
