@@ -1,5 +1,4 @@
 import time
-
 import forca
 import adivinhacao
 import jokenpo
